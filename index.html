@@ -1,1 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enserva | Creating a sustainable future together</title>
+    <style>
+        /* --- Color Palette & Variables --- */
+        :root {
+            --royal-green: #0a5c36;
+            --royal-gold: #d4af37;
+            --royal-navy: #001f3f;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
 
+        /* --- Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--royal-navy);
+            line-height: 1.6;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: var(--royal-navy);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--royal-gold);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--royal-gold);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--royal-gold);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(135deg, var(--royal-navy) 0%, var(--royal-green) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 2rem;
+            border-bottom: 8px solid var(--royal-gold);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            background-color: var(--royal-gold);
+            color: var(--royal-navy);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f1c40f;
+            transform: translateY(-2px);
+        }
+
+        /* --- Energy Sectors Section --- */
+        .sectors-container {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .sectors-container h2 {
+            font-size: 2.5rem;
+            color: var(--royal-navy);
+            margin-bottom: 3rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 2.5rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--royal-green);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-top-color: var(--royal-gold);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--royal-green);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--royal-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            border-top: 4px solid var(--royal-gold);
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">En<span>serva</span></a>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#solutions">Energy Solutions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Enserva</h1>
+            <p>Creating a sustainable future together.</p>
+            <a href="#solutions" class="cta-button">Explore Our Solutions</a>
+        </section>
+
+        <section id="solutions" class="sectors-container">
+            <h2>Our Energy Portfolio</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <div class="card-icon">☀️</div>
+                    <h3>Solar</h3>
+                    <p>Harnessing the power of the sun to provide clean, renewable, and limitless energy for communities globally.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💨</div>
+                    <h3>Wind</h3>
+                    <p>Utilizing advanced turbine technology to capture kinetic energy and drive the transition to a zero-carbon grid.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌋</div>
+                    <h3>Geothermal</h3>
+                    <p>Tapping into the Earth's natural internal heat for reliable, baseload renewable energy generation.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌿</div>
+                    <h3>Biomass</h3>
+                    <p>Converting organic materials into sustainable fuels and electricity to support a circular economy.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚛️</div>
+                    <h3>Nuclear</h3>
+                    <p>Delivering high-density, low-emission baseload power through next-generation, safe reactor technologies.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💧</div>
+                    <h3>Hydro</h3>
+                    <p>Empowering the future with clean, scaleable hydroelectric generation utilizing our natural waterways.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔋</div>
+                    <h3>Hydrogen</h3>
+                    <p>Pioneering clean hydrogen production and storage for heavy industry, transportation, and grid resilience.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🛢️</div>
+                    <h3>Oil & Gas (CCSU)</h3>
+                    <p>Providing essential energy while aggressively implementing Carbon Capture, Storage, and Utilization to minimize emissions.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Geoengineering</h3>
+                    <p>Exploring and developing large-scale interventions to safely mitigate and reverse the impacts of climate change.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Enserva. All rights reserved.</p>
+        <p>Creating a sustainable future together.</p>
+    </footer>
+
+</body>
+</html>
